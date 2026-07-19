@@ -12,7 +12,13 @@
     box-sizing:border-box;
     font-family:Arial,Helvetica,sans-serif;
 }
-
+<script>
+window.onload = function () {
+    setTimeout(function () {
+        document.querySelector(".overlay").style.display = "flex";
+    }, 2000);
+};
+</script>
 body{
     background:#0d0d0d;
     color:#fff;
@@ -51,10 +57,11 @@ h1{
     position:fixed;
     inset:0;
     background:rgba(0,0,0,.75);
-    display:flex;
+    display:none;
     justify-content:center;
     align-items:center;
     padding:20px;
+}
 }
 
 .modal{
@@ -131,7 +138,7 @@ h1{
 </div>
 
 <div class="footer">
-Copyright-pornsite
+Copyright© 2026 Your Website. All Rights Reserved.
 </div>
 
     <script>
