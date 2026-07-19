@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#0d0d0d;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:30px 15px;
+}
+
+h1{
+    text-align:center;
+    color:#d9a400;
+    margin-bottom:30px;
+    font-size:38px;
+    font-weight:bold;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:12px;
+    border:2px solid #c99a00;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.modal{
+    background:#222;
+    width:100%;
+    max-width:620px;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 0 25px rgba(0,0,0,.6);
+}
+
+.modal h2{
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.modal p{
+    color:#ddd;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.btn{
+    text-decoration:none;
+    background:#f4b400;
+    color:#000;
+    padding:16px 32px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.note{
+    margin-top:25px;
+    color:#bbb;
+    font-size:15px;
+}
+
+.footer{
+    text-align:center;
+    color:#999;
+    margin:40px 0;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>WELCOME TO YOUR LANDING PAGE</h1>
+
+<div class="gallery">
+
+<img src="https://picsum.photos/400/600?1">
+<img src="https://picsum.photos/400/600?2">
+<img src="https://picsum.photos/400/600?3">
+<img src="https://picsum.photos/400/600?4">
+<img src="https://picsum.photos/400/600?5">
+<img src="https://picsum.photos/400/600?6">
+
+</div>
+
+<div class="footer">
+Your tagline goes here
+</div>
+
+</div>
+
+<div class="overlay">
+
+<div class="modal">
+
+<h2>WELCOME</h2>
+
+<p>
+Click one of the buttons below to continue.
+</p>
+
+<div class="buttons">
+
+<a href="https://example.com/free" class="btn">
+FREE ACCESS
+</a>
+
+<a href="https://example.com/vip" class="btn">
+VIP ACCESS
+</a>
+
+</div>
+
+<div class="note">
+Replace the links and images with your own content before publishing.
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
