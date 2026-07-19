@@ -111,25 +111,59 @@ header{
     color:#b8b8c7;
     font-size:clamp(1rem,2vw,1.2rem);
     line-height:1.7;
-}}
-
-
+}
 
 /* VIDEO BOX */
 
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(2,320px);
+    justify-content:center;
+    gap:25px;
 
+    max-height:520px;
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    padding-right:10px;
+    margin-top:60px;
+	
+}
+.video-grid::-webkit-scrollbar{
+    width:8px;
+}
+
+.video-grid::-webkit-scrollbar-track{
+    background:#101428;
+    border-radius:10px;
+}
+
+.video-grid::-webkit-scrollbar-thumb{
+    background:#7c5cff;
+    border-radius:10px;
+}
+
+.video-grid::-webkit-scrollbar-thumb:hover{
+    background:#5b3cff;
+}
+.video-card{
+    width:320px;
+
+    background:#14182f;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:18px;
+
+    padding:12px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
 .video-box{
-    margin:60px auto 0;
-    width:min(100%,750px);
+    width:100%;
     aspect-ratio:16/9;
-
-    border-radius:25px;
     overflow:hidden;
-
-    background:#ffffff12;
-    border:1px solid #ffffff20;
-
-    box-shadow:0 20px 70px #0008;
+    border-radius:12px;
 }
 
 .video-box video{
@@ -138,10 +172,10 @@ header{
     object-fit:cover;
     display:block;
 }
-
 .buttons{
 
     margin-top:35px;
+	margin-bottom:60px;
     display:flex;
     justify-content:center;
     gap:20px;
@@ -182,20 +216,10 @@ header{
 
 }
 
-@media (max-width:480px){
-
-.hero h1{
-    font-size:clamp(1.8rem,9vw,2.5rem);
-}
-
-.hero p{
-    font-size:15px;
-}
-
-.logo{
-    font-size:20px;
-}
-
+@media (max-width:768px){
+    .video-grid{
+        grid-template-columns:1fr;
+    }
 }
 /* STATISTICS */
 
@@ -461,9 +485,9 @@ Tia<span>Sexxy</span>
 
 
 <h1>
-Welcome To Datting App 
-<span>Free Acces</span>
-Get Free Acces to Video and chat
+Welcome 
+<span>To</span>
+Get Free Acces Video and chat!!!
 </h1>
 
 
@@ -487,20 +511,54 @@ Vip Acces
 
 </div>
 
+<div class="video-grid">
 
+    <div class="video-card">
+        <div class="video-box">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
 
-<div class="video-box">
+    <div class="video-card">
+        <div class="video-box">
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
 
-<video controls autoplay muted loop>
-    <source src="video1.mp4" type="video/mp4">
-</video>
+    <div class="video-card">
+        <div class="video-box">
+            <video controls>
+                <source src="video3.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
 
+    <div class="video-card">
+        <div class="video-box">
+            <video controls>
+                <source src="video4.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+	<div class="video-card">
+    <div class="video-box">
+        <video controls>
+            <source src="video5.mp4" type="video/mp4">
+        </video>
+    </div>
 </div>
 
-
+<div class="video-card">
+    <div class="video-box">
+        <video controls>
+            <source src="video6.mp4" type="video/mp4">
+        </video>
+    </div>
 </div>
-
-
 
 </div>
 
