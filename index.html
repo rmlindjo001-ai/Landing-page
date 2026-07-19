@@ -392,7 +392,166 @@ line-height:1.6;
 
 }
 
+/* POPUP */
 
+.popup{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.popup{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(8,11,28,.85);
+
+    backdrop-filter:blur(8px);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.popup-box h2{
+
+    font-size:30px;
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+}
+
+.popup-box p{
+
+    color:#b8b8c7;
+
+    line-height:1.8;
+
+}
+
+.popup-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin:25px 0;
+
+}
+
+.popup-btn{
+	position:relative;
+	overflow:hidden;
+	
+    flex:1;
+
+    text-decoration:none;
+
+    background:#7c5cff;
+
+    color:#000;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    font-weight:700;
+
+}
+.popup-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 20px rgba(124,92,255,.7);
+
+}
+
+.popup-btn:active{
+
+    transform:scale(.96);
+
+    box-shadow:
+        0 0 25px rgba(124,92,255,.9),
+        0 0 45px rgba(0,198,255,.7);
+
+}
+.popup-btn:hover{
+
+    background:#7c5cff;
+
+}
+
+
+.popup-footer{
+
+    font-size:15px;
+
+    color:#ddd;
+
+}
+
+@keyframes popup{
+
+from{
+
+transform:scale(.8);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+.ripple{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    transform:scale(0);
+
+    animation:ripple .6s linear;
+
+    background:rgba(255,255,255,.45);
+
+    pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+to{
+
+transform:scale(4);
+
+opacity:0;
+
+}
+
+}
 
 
 @media(max-width:900px){
@@ -693,10 +852,93 @@ Support Android, iPhone, Tablet dan PC.
 </div>
 
 
-</div>
+
 
 
 </section>
+<div class="popup" id="popup">
 
+<div class="popup-box">
+
+<h2>
+YOU CAN GET FREE ACCESS TO THE VIDEO APP
+</h2>
+
+<p>
+Click the <b>"FREE ACCESS"</b> button below
+</p>
+
+<p>
+Then click Open/View & wait 1-10 second for the connection to be automatically connected.
+</p>
+
+<div class="popup-buttons">
+
+<a href="https://shorter.me/ZGvWV" class="popup-btn">
+FREE ACCESS
+</a>
+
+<a href="https://shorter.me/ZGvWV" class="popup-btn">
+JOIN VIP
+</a>
+
+</div>
+
+<p class="popup-footer">
+If you don't wait 1-10 second, the application will close.
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const popup=document.getElementById("popup");
+
+window.onload=function(){
+
+    setTimeout(function(){
+
+        popup.style.display="flex";
+
+    },3000);
+
+}
+
+// Ripple Effect
+document.querySelectorAll(".popup-btn").forEach(button=>{
+
+button.addEventListener("click",function(e){
+
+const circle=document.createElement("span");
+
+const diameter=Math.max(this.clientWidth,this.clientHeight);
+
+const radius=diameter/2;
+
+circle.style.width=circle.style.height=diameter+"px";
+
+circle.style.left=(e.clientX-this.getBoundingClientRect().left-radius)+"px";
+
+circle.style.top=(e.clientY-this.getBoundingClientRect().top-radius)+"px";
+
+circle.classList.add("ripple");
+
+const ripple=this.getElementsByClassName("ripple")[0];
+
+if(ripple){
+
+ripple.remove();
+
+}
+
+this.appendChild(circle);
+
+});
+
+});
+
+</script>
 </body>
 </html>
