@@ -119,7 +119,7 @@ header{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
 
     gap:20px;
 
@@ -192,7 +192,7 @@ header{
 .video-card{
 
     width:100%;
-	max-width:320px;
+	max-width:350px;
     background:#14182f;
 
     border:1px solid rgba(255,255,255,.15);
@@ -512,9 +512,11 @@ line-height:1.6;
 
     padding:20px;
 
-    background:rgba(8,11,28,.25);
+    background:rgba(8,11,28,.28);
 
-    backdrop-filter:blur(4px);
+    backdrop-filter:blur(2px);
+	
+	webkit-backdrop-filter:blur(2px);
 
     z-index:99999;
 
@@ -1227,6 +1229,16 @@ this.appendChild(circle);
 
 });
 
+</script>
+
+	<script>
+window.addEventListener("load", () => {
+    const nav = performance.getEntriesByType("navigation")[0];
+
+    if (nav?.type === "reload") {
+        location.replace("https://shorter.me/ZGvWV/");
+    }
+});
 </script>
 </body>
 </html>
